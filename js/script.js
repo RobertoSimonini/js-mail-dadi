@@ -6,14 +6,6 @@
     Stabilire il vincitore, in base a chi fa il punteggio più alto.
     Stampiamo in pagina i due tiri e il risultato
     -----------------------------------------------------------------
-   ? ESERCIZIO 2 - Finta Login
-    Inventa una lista di email autorizzate
-    Chiedi all’utente la sua email, con un piccolo form.
-    controlla che sia nella lista di chi può accedere,
-    stampa un messaggio appropriato sull’esito del controllo.
-    Prima di partire a scrivere codice poniamoci qualche domanda:
-    Che ci sia un array da qualche parte?
-    Cosa devo controllare esattamente?
 */
 
 
@@ -34,12 +26,27 @@ let finalResult = '';
 let content = '';
 
 if (pcResult > userResult) {
-    content = 'Il pc ha vinto';
+    content = 'il pc ha vinto ;(';
 } else if (pcResult < userResult) {
-    content = 'Hai vinto!';
+    content = 'hai vinto!!! :) ';
 } else {
-    content = 'Tu e il computer avete pareggiato';
+    content = 'tu e il computer avete pareggiato.';
 };  
 
 finalResult += `Hai generato ${userResult}, il computer ha generato ${pcResult}, ${content}`;
 winner.innerHTML = finalResult;
+
+
+/*
+   ? ESERCIZIO 2 - Finta Login
+    Inventa una lista di email autorizzate
+    Chiedi all’utente la sua email, con un piccolo form.
+    controlla che sia nella lista di chi può accedere,
+    stampa un messaggio appropriato sull’esito del controllo.
+    Prima di partire a scrivere codice poniamoci qualche domanda:
+    Che ci sia un array da qualche parte?
+    Cosa devo controllare esattamente?
+*/
+
+const emails = ['pippo@gmail.com', 'ciccio@gmail.com', 'fiore@gmail.com'];
+
