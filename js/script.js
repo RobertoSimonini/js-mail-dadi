@@ -54,6 +54,7 @@ winner.innerHTML = finalResult;
 
 // Preapto le costanti delle mail autorizzate e prendo gli emlementi dal Dom
 const emails = ['pippo@gmail.com', 'ciccio@gmail.com', 'fiore@gmail.com'];
+const messageElement = document.getElementById('message');
 const emailElement = document.getElementById('email');
 const btnElement = document.getElementById('login');
 
@@ -72,10 +73,10 @@ btnElement.addEventListener("click", function(){
 
     if
     ((emailValue === emails[0]) || (emailValue === emails[1]) || (emailValue === emails[2])) {
-        console.log('Sei autorizzato ad accedere!');
+        messageElement.innerText = ('Sei autorizzato ad accedere!');
     }
     else {
-        console.log('non sei autorizzato ad accedere!')
+        messageElement.innerText = ('Non sei autorizzato ad accedere!');
         return;
     }  
 });
