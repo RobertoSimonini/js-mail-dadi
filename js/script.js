@@ -70,8 +70,13 @@ btnElement.addEventListener("click", function(){
 
     // Controllo che la sua email sia autorizzata
 
-     if (emailValue === 'pippo@gmail.com')
-     console.log('Sei autorizzato ad accedere!');
+    if
+    ((emailValue === emails[0]) || (emailValue === emails[1]) || (emailValue === emails[2])) {
+        console.log('Sei autorizzato ad accedere!');
+    }
+    else {
+        console.log('non sei autorizzato ad accedere!')
+        return;
+    }  
 });
 
-console.log(emails);
