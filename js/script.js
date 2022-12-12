@@ -21,17 +21,19 @@
 const winner = document.getElementById('winner');
 
 // Preparo la costante Random 
-const random = Math.random();
+const randomPc = Math.random();
+const randomUser = Math.random();
 
 // Preparo il numero Random da 1 a 6 del PC 
-const pcResult = Math.floor(random * 6) + 1;
+const pcResult = Math.floor(randomPc * 6) + 1;
 
 // Preparo il numero random da 1 a 6 dell'utente 
-const userResult = Math.floor(random * 6) + 1;
+const userResult = Math.floor(randomUser * 6) + 1;
+
 
 if (pcResult > userResult) {
     console.log('Il computer ha vinto');
-} else if ((pcResult < userResult)) {
+} else if (pcResult < userResult) {
     console.log('Hai vinto!');
 } else {
     console.log('Tu e il computer avete pareggiato');
