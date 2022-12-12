@@ -24,5 +24,8 @@ const winner = document.getElementById('winner');
 const random = Math.random();
 
 // Preparo il numero Random da 1 a 6 del PC 
-let pcResult = Math.floor(random * 6) + 1;
-// console.log(pcResult);
+const pcResult = Math.floor(random * 6) + 1;
+
+// Preparo il numero random da 1 a 6 dell'utente 
+const userResult = Math.floor(random * 6) + 1;
+console.log (userResult);
