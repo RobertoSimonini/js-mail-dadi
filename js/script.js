@@ -11,6 +11,7 @@
 
 // Prendo l'elemento del DOM 
 const winner = document.getElementById('winner');
+const btnGenerate = document.getElementById('generate');
 
 // Preparo la costante Random 
 const randomPc = Math.random();
@@ -25,16 +26,20 @@ const userResult = Math.floor(randomUser * 6) + 1;
 let finalResult = '';
 let content = '';
 
-if (pcResult > userResult) {
-    content = 'il pc ha vinto ;(';
-} else if (pcResult < userResult) {
-    content = 'hai vinto!!! :) ';
-} else {
-    content = 'tu e il computer avete pareggiato.';
-};  
+btnGenerate.addEventListener('click', function(){
+    if (pcResult > userResult) {
+        content = 'il pc ha vinto ;(';
+    } else if (pcResult < userResult) {
+        content = 'hai vinto!!! :) ';
+    } else {
+        content = 'tu e il computer avete pareggiato.';
+    };
 
-finalResult += `Hai generato ${userResult}, il computer ha generato ${pcResult}, ${content}`;
-winner.innerHTML = finalResult;
+    finalResult = `Hai generato ${userResult}, il computer ha generato ${pcResult}, ${content}`;
+    
+    winner.innerHTML = finalResult;
+});
+
 
 // -------------------------------------------------------------------------
 
