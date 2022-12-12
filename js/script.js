@@ -57,8 +57,14 @@ const emails = ['pippo@gmail.com', 'ciccio@gmail.com', 'fiore@gmail.com'];
 const emailElement = document.getElementById('email');
 const btnElement = document.getElementById('login');
 
-btnElement.addEventListener("click", function(){
 
+btnElement.addEventListener("click", function(){
     // Recupero il valore interno all'input 
-    const emailValue = emails.value.trim();
+    const emailValue = emails.value;
+
+    //! Validation
+    if (!emailValue) {
+        alert('Insert valid values!');
+        return;
+    }
 });
