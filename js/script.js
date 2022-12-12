@@ -30,11 +30,16 @@ const pcResult = Math.floor(randomPc * 6) + 1;
 // Preparo il numero random da 1 a 6 dell'utente 
 const userResult = Math.floor(randomUser * 6) + 1;
 
+let finalResult = '';
+let content = '';
 
 if (pcResult > userResult) {
-    console.log('Il computer ha vinto');
+    content = 'Il pc ha vinto';
 } else if (pcResult < userResult) {
-    console.log('Hai vinto!');
+    content = 'Hai vinto!';
 } else {
-    console.log('Tu e il computer avete pareggiato');
-};
+    content = 'Tu e il computer avete pareggiato';
+};  
+
+finalResult += `Hai generato ${userResult}, il computer ha generato ${pcResult}, ${content}`;
+winner.innerHTML = finalResult;
