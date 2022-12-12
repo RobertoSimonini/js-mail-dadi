@@ -60,11 +60,18 @@ const btnElement = document.getElementById('login');
 
 btnElement.addEventListener("click", function(){
     // Recupero il valore interno all'input 
-    const emailValue = emails.value;
+    const emailValue = emailElement.value;
 
     //! Validation
     if (!emailValue) {
-        alert('Insert valid values!');
-        return;
+         alert('Insert valid values!');
+         return;
     }
+
+    // Controllo che la sua email sia autorizzata
+
+     if (emailValue === 'pippo@gmail.com')
+     console.log('Sei autorizzato ad accedere!');
 });
+
+console.log(emails);
